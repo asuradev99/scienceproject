@@ -58,7 +58,7 @@ void setup() {
   //customs
   //size(1000, 1000);
   fullScreen();
-  first_setup(100, 10,2, width/2, height/2);
+  first_setup(100, 1,2, width/2, height/2);
 }
 //main loop
 void draw() {
@@ -229,14 +229,14 @@ void first_setup(int body_cells, int viruses,int killers1,  int start_x, int sta
   for(int i = 0; i < killers1; i++){
     killers.add(new killer_t(start_x + (int) random(-80,80), start_y + (int) random(-80,80)));
   }
-  //for(int i = 0; i < 10; i++){
-  //  macrophages.add(new macrophage_cell(start_x, start_y, 25));
-  //}
-  //for(int i = 0; i < 10; i++){
-  //b_cells.add(new b_cell(start_x + (int)random(-50,50),start_y + (int) random(-50,50), 1,0,0));
-  //helpers.add(new helper_t(start_x + (int) random(-50,50), start_y + (int) random(-50,50)));
-  //phagocytes.add(new phagocyte(start_x, start_y));
-  //}
+  for(int i = 0; i < 10; i++){
+    macrophages.add(new macrophage_cell(start_x, start_y, 25));
+  }
+  for(int i = 0; i < 10; i++){
+    b_cells.add(new b_cell(start_x + (int)random(-50,50),start_y + (int) random(-50,50), 1,0,0));
+    helpers.add(new helper_t(start_x + (int) random(-50,50), start_y + (int) random(-50,50)));
+    phagocytes.add(new phagocyte( start_x + (int) random(-50,50), start_y + (int) random(-50,50)));
+  }
 }
 void second_setup(int macrophages1, int bacteria, int startX, int startY){
   for(int i = 0; i < macrophages1; i++){

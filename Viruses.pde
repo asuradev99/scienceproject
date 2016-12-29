@@ -16,7 +16,7 @@ class cold_virus {
     customFill(165,165,165,5);
   
     //shades the graphics
-    ellipse(x,y,60,10);//shape of virus
+    ellipse(x,y,10,10);//shape of virus
     //movement
     x += random(-3,4);
     y += random(-3,4);
