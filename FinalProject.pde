@@ -58,7 +58,8 @@ void setup() {
   //customs
   //size(1000, 1000);
   fullScreen();
-  first_setup(100, 1,2, width/2, height/2);
+  //first_setup(100, 1,2, width/2, height/2);
+  second_setup(10,0,20, width/2, height/2);
 }
 //main loop
 void draw() {
@@ -214,7 +215,7 @@ void timer(){
     time = 0;
     seconds += 1;
     
-    println(seconds + " , " + cells.size() + " , " + total_viruses + " , " + infected);
+    println(seconds + " , " + cells.size() + " , " + total_viruses + " , " + infected + ", " + staphs.size());
     
   }
   
@@ -238,9 +239,15 @@ void first_setup(int body_cells, int viruses,int killers1,  int start_x, int sta
     phagocytes.add(new phagocyte( start_x + (int) random(-50,50), start_y + (int) random(-50,50)));
   }
 }
-void second_setup(int macrophages1, int bacteria, int startX, int startY){
+void second_setup(int cell, int macrophages1, int bacteria, int startX, int startY){
   for(int i = 0; i < macrophages1; i++){
     macrophages.add(new macrophage_cell(startX, startY, 25)); 
+  }
+  for(int i = 0; i < bacteria; i++){
+    staphs.add(new staph(startX + (int) random(-50, 50), startY + (int) random(-50,50)));
+  }
+  for(int i = 0; i < cell; i++){
+    cells.add(new body_cell(startX, startY, 20));
   }
 }
 void eraser(){
