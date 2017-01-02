@@ -56,10 +56,10 @@ void setup() {
   staphs = new ArrayList<staph>();
   toxins = new ArrayList<toxin>();
   //customs
-  //size(1000, 1000);
-  fullScreen();
+  size(1000, 650);
+  //fullScreen();
   //first_setup(100, 1,2, width/2, height/2);
-  second_setup(10,0,20, width/2, height/2);
+  //second_setup(10,0,20, width/2, height/2);
 }
 //main loop
 void draw() {
