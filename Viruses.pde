@@ -18,8 +18,8 @@ class cold_virus {
     //shades the graphics
     ellipse(x,y,10,10);//shape of virus
     //movement
-    x += random(-3,4);
-    y += random(-3,4);
+    x += random(-3,3);
+    y += random(-3,3);
    
     //for(int i = 0; i < antibodies.size(); i++){
     //  antibody a = antibodies.get(i);

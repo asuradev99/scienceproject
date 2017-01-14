@@ -36,13 +36,13 @@ class body_cell {
     ellipse(x, y, size, size);//shape of cell
     //movement
     if(toxinated == 0){
-    x += random(-3, 4);
-    y += random(-3, 4);
+    x += random(-3, 3);
+    y += random(-3, 3);
     }
     else if (toxinated == 1){
       
-      x += random(-10, 11);
-      y += random(-10,11);
+      x += random(-10, 10);
+      y += random(-10,10);
       size -= .08;
     }
     for(int i = 0; i < toxins.size(); i++){
@@ -100,8 +100,8 @@ class macrophage_cell {
     }
     else if (toxinated == 1){
       
-      x += random(-6, 7);
-      y += random(-6, 7);
+      x += random(-6, 6);
+      y += random(-6, 6);
       size -= .08;
     }
     for(int i = 0; i < toxins.size(); i++){
@@ -170,8 +170,8 @@ class killer_t {
     customFill(0, 203, 25, 5);//shades the graphics
     ellipse(x, y, 20, 20);//shape of cell
     //movement
-    x += random(-3, 4);
-    y += random(-3, 4);
+    x += random(-3, 3);
+    y += random(-3, 3);
 
     //kills infected cells
     for (int i = 0; i < cells.size(); i++) {
@@ -217,8 +217,8 @@ class b_cell {
     }
     ellipse(x, y, 20, 20);//shape of cell
     //movement
-    x += random(-3, 4);
-    y += random(-3, 4);
+    x += random(-3, 3);
+    y += random(-3, 3);
 
     //makes an antibody
     if (pathogen != 0) {
@@ -359,14 +359,12 @@ class antibody {
     if (following == 1) {
       if (on < colds.size()) {
         cold_virus c = colds.get(on);
-        if(c.captured == 1 && checked != 1){
+        if(c.captured == 1 && checked != 1 ){
           on += 1;
           
         }
-        else if(c.captured == 0){
-          checked = 1;
-        }
-        if (dist(x, y, c.x, c.y) < 30) {
+        
+        if (dist(x, y, c.x, c.y) < 10) {
           checked = 1;
           c.captured = 1;
           x = c.x;

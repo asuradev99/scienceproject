@@ -38,9 +38,9 @@ ArrayList<phagocyte> phagocytes;
 ArrayList <cold_virus> colds;
 ArrayList <staph> staphs;
 //antibody
-ArrayList<antibody>antibodies;
+ArrayList <antibody> antibodies;
 //bacterial toxins
-ArrayList<toxin>toxins;
+ArrayList<toxin> toxins;
 //list setup
 void setup() {
   //time = millis();
@@ -178,7 +178,7 @@ void drawStats() {
   textSize(25);
   text("Stats:", 20, 30);
   textSize(15);
-  text("Body Cells: " + cells.size() + " , " + infected, 20, 50);
+  text("Body Cells: " + cells.size(), 20, 50);
   text("Viruses: " + total_viruses, 20, 70);
   text("Bacteria: " + staphs.size(), 20, 90);
   text("Body Health: ", 20, 110);
