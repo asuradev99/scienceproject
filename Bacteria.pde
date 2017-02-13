@@ -10,8 +10,8 @@ class staph {
   void render(){
     customFill(219,17,17,5);
     ellipse(x,y,15,15);
-    x += random(-2,2);
-    y += random(-2,2);
+    x += random(-2,3);
+    y += random(-2,3);
     
     if(random(0,1) < production_rate / 1000 ){
       staphs.add(new staph(x,y));
@@ -35,7 +35,7 @@ class toxin {
     customFill(219,17,17,2);
     rect(x,y,5,5);
     
-    x += random(-2,2);
-    y += random(-2,2);
+    x += random(-2,3);
+    y += random(-2,3);
   }
 }
