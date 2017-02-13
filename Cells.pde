@@ -36,8 +36,8 @@ class body_cell {
     ellipse(x, y, size, size);//shape of cell
     //movement
     if(toxinated == 0){
-    x += random(-3, 3);
-    y += random(-3, 3);
+    x += random(-3, 4);
+    y += random(-3, 4);
     }
     else if (toxinated == 1){
       
@@ -170,8 +170,8 @@ class killer_t {
     customFill(0, 203, 25, 5);//shades the graphics
     ellipse(x, y, 20, 20);//shape of cell
     //movement
-    x += random(-3, 3);
-    y += random(-3, 3);
+    x += random(-3, 4);
+    y += random(-3, 4);
 
     //kills infected cells
     for (int i = 0; i < cells.size(); i++) {
@@ -217,8 +217,8 @@ class b_cell {
     }
     ellipse(x, y, 20, 20);//shape of cell
     //movement
-    x += random(-3, 3);
-    y += random(-3, 3);
+    x += random(-3, 4);
+    y += random(-3, 4);
 
     //makes an antibody
     if (pathogen != 0) {
